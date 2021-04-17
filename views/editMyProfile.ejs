@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShortStory | <%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="/profile.css" rel="stylesheet" type="text/css" />
+    <link href="/editMyProfile.css" rel="stylesheet" type="text/css" />
+    <script src="/profile.js"></script>
+    <script src="/editProfile.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+        <div id="header-brand"><a  href="/home">ShortStory</a></div>
+        <%- include('./partials/customNav.ejs') %>
+    </header>
+    <div id="account" class="card" onclick="expand(1)" ontouchcancel="close(1)">
+        <div class="option">
+            <div class="title">Account
+                <p>Update your profile details.</p>
+            </div>
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <form class="forms" action="" method="POST">
+            <div class="inputFields">
+                <label for="name">Name</label><br>
+                <input type="text" placeholder="Type your name" name="name">
+            </div>
+            <div class="inputFields">
+                <label for="Email">Email</label><br>
+                <input type="text" placeholder="user@example.com" name="email">
+            </div>
+            <div class="inputFields">
+                <label for="bio">Bio</label><br>
+                <textarea onkeyup="bioLength()" id="bio" name="bio" cols="30" rows="5" placeholder="Enter bio..."></textarea>
+                <div id="charCount">0/100</div>
+            </div>
+            <button class="saveBtn" name="save">Save Changes</button>
+        </form>
+    </div>
+    <div id="security" class="card" onclick="expand(2)" ontouchcancel="close(2)">
+        <div class="option">
+            <div class="title">Security
+                <p>Update your security details.</p>
+            </div>
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        </div>
+        <form class="forms" action="" method="POST">
+            <div class="inputFields">
+                <label for="name">Current password</label><br>
+                <input type="text" placeholder="Current password" name="currentPw">
+            </div>
+            <div class="inputFields">
+                <label for="Email">New password</label><br>
+                <input type="text" placeholder="New password" name="newPw">
+            </div>
+            <div class="inputFields">
+                <label for="verify">Verify password</label><br>
+                <input type="text" placeholder="Verify password" name="verifyPw">
+            </div>
+            <button class="saveBtn" name="save">Change Password</button>
+        </form>
+    </div>
+    <div id="social" class="card" onclick="expand(3)" onmouseout="close(3)">
+        <div class="option">
+            <div class="title">Social
+                <p>Update your social details.</p>
+            </div>
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </div>
+        <form class="forms" action="" method="POST">
+            <div class="socialInput">
+                <label for="facebook">Facebook</label><br>
+                <div class="socialMedia">
+                    <i class="fa fa-facebook"></i>
+                    <input type="text" placeholder="Username" name="facebook">
+                </div>
+            </div>
+            <div class="socialInput">
+                <label for="instagram">Instagram</label><br>
+                <div class="socialMedia">
+                    <i class="fa fa-instagram"></i>
+                    <input type="text" placeholder="Username" name="instagram">
+                </div>
+            </div>
+            <div class="socialInput">
+                <label for="snapchat">Snapchat</label><br>
+                <div class="socialMedia">
+                    <i class="fa fa-snapchat-ghost"></i>
+                    <input type="text" placeholder="Username" name="snapchat">
+                </div>
+            </div>
+            <div class="socialInput">
+                <label for="twitter">Twitter</label><br>
+                <div class="socialMedia">
+                    <i class="fa fa-twitter"></i>
+                    <input type="text" placeholder="Username" name="twitter">
+                </div>
+            </div>
+            <button class="saveBtn" name="save">Update Social</button>
+        </form>
+    </div>
+  </body>
+</html>

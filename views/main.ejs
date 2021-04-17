@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShortStory | <%= title %></title>
+    <link href="/index.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="#"><!--ShortSotry_Brand.png-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <script src="#"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal@4"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <header class="smlHeader">
+      <div class="sm-navbar">
+        <div class="sm-header-brand"><a href="/home">ShortStory</a></div>
+        <div class="sm-navLinks">
+          <a href="/home">Home</a>
+          <a href="/stories">Stories</a>
+          <a id="logInNavBtn" href="/login">Log in</a>
+          <a class="logOutButton" href="/logOut">Log Out</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="page-image">
+        <div>
+          <h2 class="page-image-word">A place to show the world your imagination</h2>
+        </div>
+      </section>
+      <br><br><br>
+      <div class="top-btns">
+        <div class="story-button">
+          <a href="#">Stories</a>
+        </div>
+          <br><br>
+        <div class="cat-button">
+          <a href="#">Categories</a>
+        </div>
+      </div>
+
+      <br><br><br><br>
+      <div class="main-container">
+      <section>
+        <div class="standfor">
+          <h1>ShortStory</h1>
+          <p>This is a place to show the world your imaginations through the
+             stories you write.
+             Writing is a way of showing people your imagination, your opinion
+             ,or what you stand for.
+             In our web app we allow you to connect with people by sharing
+             your work. This allows you to get feed back on your stories.
+          </p>
+        </div>
+
+        <br>
+        <div class="second-form">
+          <h1>Our Objectives</h1>
+          <ul>
+            <li><p>Give you the opportunity to show the world you imaginations.</p></li>
+            <li><p>Help you get feedback on your works to be able to improve them.</p></li>
+            <li><p>Connect you with people whom share common work field.</p></li>
+            <li><p>Improve your writing skills by giving you reliable sources</p></li>
+          </ul>
+        </div>
+
+        <br>
+        <div class="advertizing-reader">
+          <h1>Readers</h1>
+          <p>Is reading your favorite hobby? <br> Do you like reading Short Stories?
+          <br>If yes, your are in the right place. Here you can find a varity of
+             Short Stories.
+          </p>
+        </div>
+        </section>
+
+        <br><br>
+  <!--      <div class="connect-user">
+          <ul>
+            <li class="signUp-button"><a href="/signUp">Sign up</a></li>
+
+            <li class="login-button"><a href="/login">Log in</a></li>
+          </ul>
+          <br>
+        </div>-->
+      </div>
+    </main>
+    <script>
+      var zoomOut = {
+        delay: 300,
+        duration: 500,
+        scale: 0.5,
+        reset: true};
+
+      ScrollReveal().reveal('.page-image', zoomOut);
+      ScrollReveal().reveal('.page-image-word', zoomOut);
+      /*ScrollReveal().reveal('.standfor', zoomOut);
+      ScrollReveal().reveal('.second-form', zoomOut);
+      ScrollReveal().reveal('.advertizing-reader', zoomOut);
+      */
+      ScrollReveal().reveal('.story-button', {
+        origin: 'right',
+        distance: '20px',
+        delay: 300,
+        duration: 500,
+        reset: true
+      });
+
+      ScrollReveal().reveal('.cat-button', {
+        origin: 'left',
+        distance: '20px',
+        delay: 300,
+        duration: 500,
+        reset: true
+      });
+    </script>
+
+    <footer>
+      <div class="quick-link">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="media-icons">
+        <ul>
+          <li><a href="#" class="fa fa-facebook" style="font-size: 25px;"></a></li> <!-- Facebook -->
+          <li><a href="#" class="fa fa-twitter" style="font-size: 25px;"></a></li> <!-- Twitter -->
+          <li><a href="#" class="fa fa-instagram" style="font-size: 25px;"></a></li> <!-- Instagram -->
+          <li><a href="#" class="fa fa-youtube" style="font-size: 25px;"></a></li> <!-- Youtube -->
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

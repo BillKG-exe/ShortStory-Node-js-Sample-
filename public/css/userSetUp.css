@@ -1,0 +1,256 @@
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+  }
+  
+body{
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    background-color: white; 
+}
+
+.header-brand {
+    color: black;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 45px;
+    padding-left: 15px;
+}
+
+header i {
+    float: right;
+    padding: 15px;
+}
+
+.fa-bars {
+    font-size: 20px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: .5s;
+}
+
+.sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #FBF8F6;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  .closebtn {
+      font-size: 24px;
+  }
+
+  main div h2 {
+      font-weight: 800;
+      text-align: center;
+      margin: 25px auto;
+  }
+
+  main {
+      width: 100%;
+      height: calc(100vh - 55px);
+  }
+
+  .fillUp-box {
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+
+  .fillUp-box p {
+    width: 30%;
+    font-size: 20px;
+    padding-right: 15px;
+  }
+
+  .fillUp-box div {
+      display: block;
+  }
+
+  .fields {
+      font-size: 18px;
+      display: flex;
+  }
+  .fields #username-value, #name-value {
+    float: right;
+    padding-right: 15px;
+  }
+
+  .fields #username input, #name input{
+    display: none;
+    font-size: 18px;
+    padding-left: 15px;
+    border: 1px solid black;
+  }
+
+  .closeInputbtn {
+    display: none;
+    float: right;
+    padding-right: 15px;
+  }
+
+  .editLink {
+    color: #1E90FF;
+    font-size: 18px;
+    float: right;
+    padding-left: 35px; 
+  }
+
+  .fillUp-box input {
+      width: 60%;
+      height: 35px;
+      font-size: 17px;
+      padding-left: 10px;
+      float: right;
+      outline: none;
+      border-radius: 5px;
+  }
+
+  .changeEmail {
+      margin-top: 10px;
+  }
+
+  .changeEmail a {
+      color: #1E90FF;
+      font-size: 18px;
+      text-decoration: underline;
+  }
+
+  .newPwLink {
+    font-size: 18px;
+  }
+
+  .newPwLink a {
+      color: #1E90FF;
+      text-decoration: underline;
+      padding-top: 15px;
+  }
+
+  .bioEdit {
+      display: block;
+      font-size: 18px;
+  }
+
+  #bio {
+      float: right;
+  }
+
+  .bioEdit textarea {
+    display: none;
+    margin: 10px auto;
+    font-size: 18px;
+    border: 1px solid black;
+  }
+
+  .bioEdit #charCount {
+    display: none;
+    font-size: 15px;
+  }
+
+  .bioEdit .editLink {
+    padding-right: 15px;
+  }
+
+  .media {
+      display: flex;
+  }
+
+  .media div {
+      font-size: 18px;
+  }
+
+  .media i {
+      float: right;
+  }
+
+  .fa-plus {
+      color: #1E90FF;
+      font-size: 25px;
+      padding-right: 20px;
+  }
+
+  #mediaTags {
+      display: none;
+      width: 45%;
+      height: 25px;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+
+  #mediaContainer {
+      display: flex;
+  }
+
+  #mediaInput {
+    display: none;
+    width: 80%;
+    height: 25px;
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  #plusIcon2 {
+    display: none;
+    float: left;
+    padding: none;
+  }
+
+  .plus2 div {
+      color: black;
+  }
+
+  form button{
+    width: 60%;
+    height: 35px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 5px;
+    border: 1px solid #1E90FF;
+    background-color: #1E90FF;
+  }
+
+  form button:hover {
+    border: 1px solid #4169E1;
+    background-color: #4169E1;
+  }

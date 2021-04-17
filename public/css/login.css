@@ -1,0 +1,327 @@
+*{
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+
+body{
+  background-color: white;
+}
+
+/*header*/
+
+header{
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  top: 0;
+  background-color: white; /*FBF8F6*/
+  /*box-shadow: 5px 10px 26px #888888;*/
+}
+
+.header-brand{
+  color: black;
+  font-size: 44px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logOutButton{
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+  header {
+    height: 100px;
+  }
+
+  .header-brand{
+    font-size: 60px;
+    padding: 15px 0;
+    line-height: 55px;
+  }
+
+  header nav ul li a{
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  header {
+    height: 75px;
+    background-color: #FBF8F7;
+  }
+
+  body {
+    background-color: #FBF8F7;
+  } 
+
+  .header-brand {
+    float: left;
+    padding-left: 25px;
+    font-size: 35px;
+  }
+}
+
+/*MAIN*/
+
+main {
+  height: calc(100vh - 105px);
+}
+
+main section{
+  width: 70%;
+  margin: auto;
+}
+
+h1 {
+  color: black;
+  font-size: 38px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  margin: 25px auto;
+  margin-bottom: 100px;
+}
+
+input[type=email], input[type=password]{
+  width: 95%;
+  height: 40px;
+  display: block;
+  margin: auto;
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+  outline: hidden;
+  border: none;
+  border-bottom: 3px solid black;
+}
+
+input[type=email]:hover, input[type=password]:hover {
+  width: 100%;
+  transition-duration: 0.1s;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+  background-color: #FBF8F7;
+}
+
+main section form a {
+  width: auto;
+  color: #A99E9C;
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+  font-family: normal;
+  line-height: 50px;
+}
+
+main section form a:hover{
+  color: #111;
+  text-decoration: underline;
+}
+
+main section form button {
+  width: 100%;
+  height: 40px;
+  color: white;
+  display: block;
+  margin: auto;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  border: 2px solid #111;
+  background-color: #111;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+/*  box-shadow: 5px 10px 18px #888888;*/
+}
+
+main section form button:hover {
+  color: #111;
+  background-color: white;
+  transition-duration: 0.5s;
+}
+
+.new-account {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.new-account:hover {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    height: calc(100vh -  80px);
+  }
+
+  main section{
+    width: 55%;
+  }
+
+  h1 {
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 70px;
+    margin: 150px 0;
+  }
+
+  input[type=email], input[type=password]{
+    width: 95%;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  main section form a{
+    font-size: 23px;
+  }
+
+
+  main section form button {
+    width: 95%;
+    height: 70px;
+    font-size: 34px;
+  }
+
+  .new-account {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 900px){
+  main section {
+    width: 30%;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    font-size: 30px; /*40*/
+    margin: 10px auto;
+  }
+
+  input[type=email], input[type=password]{
+    width: 65%;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  input[type=email]:hover, input[type=password]:hover {
+    width: 70%;
+    transition-duration: 0.3s;
+  }
+
+  /*
+  .forgot-btn {
+
+  }*/
+
+  main section form a{
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+  }
+
+  main section form button {
+    width: 35%;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .new-account {
+    font-size: 16px;
+  }
+
+  #error-message {
+    width: 70%;
+    height: 40px;
+    margin: 15px auto;
+    margin-bottom: 0;
+    background-color: lightcoral;
+  }
+
+  #error-message p {
+    line-height: 35px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+  }
+}
+
+/*FOOTER*/
+
+footer{
+  width: 100%;
+  height: 260px;
+  background-color: #111;
+}
+
+footer ul{
+  margin: 0 auto;
+}
+
+.quick-link ul{
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.quick-link ul li a{
+  color: white;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.media-icons{
+    width: 100%;
+    padding: 25px 0;
+}
+
+.media-icons ul li {
+  float: left;
+  margin: 0 auto;
+  width: 25%;
+}
+
+.fa {
+  padding: 20px;
+  margin: 5px 2px;
+  color: black;
+  background-color: white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+@media only screen and (min-width: 768px) {
+  footer{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .quick-link ul li a{
+    font-size: 25px;
+  }
+
+  .media-icons{
+      padding-left: 45px;
+  }
+
+  .fa {
+    font-size: 45px;
+  }
+}

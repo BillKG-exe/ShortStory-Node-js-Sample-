@@ -1,0 +1,129 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;      
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: white;
+}
+
+.card {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid #edeef6;
+    background-color: white;
+}
+
+.card .option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.card .option .title {
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card .option .title p{
+    color: grey;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card .option i{
+    color: black;
+    font-size: 24px;
+}
+
+form {
+    display: none; 
+}
+
+.inputFields {
+    display: block;
+    width: 100%;
+    margin: 15px auto 15px auto;
+}
+
+.socialInput {
+    margin: 35px auto 35px auto;
+}
+
+.inputFields label, .socialInput label {
+    color: #7f808c;
+    font-size: 15px;
+}
+
+.inputFields input[type=text], textarea {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;/*or 17px*/
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #edeef6;
+}
+
+textarea {
+    height: auto;
+    padding: 15px;
+}
+
+#charCount {
+    color: #7f808c;
+    font-size: 12px;
+}
+
+.saveBtn {
+    display: block;
+    width: 100%;
+    height: 60px;
+    color: white;
+    font-size: 18px;
+    margin: 35px auto 35px auto;
+    border-radius: 5px;
+    background-color: black;
+}
+
+
+.socialMedia {
+    display: flex;
+    height: 60px;
+    margin: 10px auto 10px auto;
+    align-items: center;
+    border-radius: 5px;   
+    background-color: #edeef6;
+}
+
+.socialMedia input[type=text] {
+    width: 85%;
+    height: 55px;
+    font-size: 17px;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    background-color: #edeef6;
+}
+
+.socialMedia i {
+    text-align: center;
+    padding-left: 5px;
+    margin: auto;
+}

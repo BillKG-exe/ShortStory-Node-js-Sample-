@@ -1,0 +1,285 @@
+*{
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: white;
+}
+
+/*header*/
+
+header{
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  /*box-shadow: 5px 5px 8px 2px #ccc;*/
+}
+
+.header-brand{
+  color: black;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  line-height: 75px;
+  text-align: left;
+  padding: 20px 0;
+  padding-left: 20px;
+}
+
+.logButton {
+  float: right;
+  color: black;
+  font-size: 20px;
+  font-style: italic;
+  font-family: 'Lato', sans-serif;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 5px 10px;
+  /*line-height: 70px;*/
+  border: 1px solid black;
+}
+
+.logButton:hover {
+  color: white;
+  background-color: black;
+}
+
+header nav ul {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+/*
+header nav ul li{
+  float: left;
+  display: inline-block;
+  padding: 0 16px;
+}
+
+header nav ul li a{
+  color: #111;
+  font-size: 16px;
+  font-family: georgia;
+  text-transform: uppercase;
+}
+
+.logOutButton{
+  display: none;
+}
+*/
+@media only screen and (min-width: 768px) {
+
+  .header-brand{
+    font-size: 34px;
+    padding: 15px 0;
+  }
+
+  header nav ul li a{
+    font-size: 24px;
+  }
+
+}
+
+@media only screen and (min-width: 900px) {
+    header {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  body {
+    background-color: #FBF8F7;
+  }
+
+  .header-brand{
+    font-size: 35px;
+    padding: 15px 0;
+    padding-left: 25px;
+  }
+
+  header nav ul li a{
+    font-size: 18px;
+  }
+
+}
+
+
+/*MAIN*/
+/*
+main {
+  height: calc(100vh - 80px);
+}*/
+
+main section {
+  width: 70%;
+  margin: auto;
+}
+
+main section form h1 {
+  color: black;
+  font-size: 38px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  line-height: 50px;
+  margin: 25px auto;
+  margin-bottom: 25px;
+}
+
+main form input[type=email], input[type=password], input[type=text] {
+  width: 95%;
+  height: 40px;
+  display: block;
+  margin: auto;
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid black;
+}
+
+main form input[type=email]:hover, input[type=password]:hover, input[type=text]:hover {
+  width: 100%;
+  transition-duration: 0.1s;
+}
+
+main form button {
+  width: 100%;
+  height: 40px;
+  color: white;
+  display: block;
+  margin: auto;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  border: 2px solid #111;
+  background-color: #111;
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+main form button:hover {
+  color: #111;
+  background-color: white;
+}
+
+#error-message {
+  width: 70%;
+  height: 30px;
+  margin: auto;
+  margin-top: 15px;
+  background-color: lightcoral;
+}
+
+#error-message p {
+  line-height: 30px;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.terms-section {
+  width: 100%;
+  padding-top: 25px;
+}
+
+.terms-section p {
+  color: #808080;
+  text-align: center;
+}
+
+.terms-section p span a {
+  color: #111;
+}
+
+.terms-section p span a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  main section {
+    width: 50%;
+  }
+
+  main section form h1 {
+    font-size: 50px;
+    line-height: 100px;
+    margin: 50px 0;
+  }
+
+  main form input[type=email], input[type=password], input[type=text] {
+    height: 50px;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  main form button {
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .terms-section p {
+    font-size: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 900px) {
+  main section {
+    width: 30%;
+    padding: 0 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  main section form h1 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 100px;
+    margin: 25px 0;
+  }
+
+  main form input[type=email], input[type=password], input[type=text] {
+    width: 65%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  main form input[type=email]:hover, input[type=password]:hover, input[type=text]:hover {
+    width: 70%;
+    transition-duration: 0.3s;
+  }
+
+  main form button {
+    width: 50%;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  main form button:hover {
+    transition-duration: 0.3s;
+  }
+
+  #error-message {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    margin-top: 15px;
+    background-color: lightcoral;
+  }
+
+  #error-message p {
+    line-height: 35px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+  }
+  .terms-section p {
+    font-size: 16px;
+  }
+}

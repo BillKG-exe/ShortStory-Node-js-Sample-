@@ -1,0 +1,467 @@
+*{
+  font-family: "open sans", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #FBF8F6;
+}
+
+/*header*/
+
+header{
+  width: 100%;
+  height: 65px;
+  position: relative;
+  background-color: white;
+  box-shadow: 5px 0px 8px 2px #ccc;
+}
+
+.header-brand{
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: georgia;
+  display: block;
+  float: left;
+  margin-left: 25px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header nav {
+  display: none;
+}
+
+header i {
+  float: right;
+  padding: 20px 0;
+  margin-right: 25px;
+}
+
+header nav ul {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+header nav ul li{
+  float: left;
+  padding: 0 16px;
+}
+
+header nav ul li a{
+  color: #111;
+  font-size: 16px;
+  font-family: georgia;
+  text-transform: uppercase;
+}
+
+.logInButton{
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .header-brand{
+    font-size: 34px;
+    padding: 15px 0;
+  }
+
+  header nav ul li a{
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .fa-bars {
+    display: none;
+  }
+
+  header nav {
+    display: block;
+  }
+
+  header{
+    height: 45px;
+  }
+  
+  .header-brand{
+    font-size: 25px;
+    padding: 5px;
+  }
+  
+  header nav ul {
+    float: right;
+  }
+  
+  header nav ul li{
+    padding: 10px;
+    padding-right: 35px;
+  }
+  
+  header nav ul li a {
+    color: grey;
+    font-size: 17px;
+    text-transform: initial;
+  }
+
+  header nav ul li a:hover {
+    color: black;
+    transition-duration: 0.3s;
+  }
+  
+  .logInButton{
+    display: none;
+  }
+}
+/* MAIN */
+main {
+  width: 100%;
+  height: auto;
+  /*height: 100vh;*/
+}
+
+#menu-bar {
+  width: 100%;
+  height: calc(100vh - 65px);
+  background-color: #111; /*lightblue mix green = #20B2AA*/
+  cursor: pointer;
+  display: none;
+}
+
+#menu-bar ul {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+#menu-bar ul li {
+  padding: 24px 18px;
+}
+
+/*You can background black and color white and bright like light*/
+#menu-bar ul a li{
+  color: #818181;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+#menu-bar ul a li:hover {
+  color: #f1f1f1;
+}
+
+#menu-bar ul li:hover {
+  background-color: black; /*darkblue mix green = #008B8B*/
+}
+
+
+.dropdown-header {
+  position: relative;
+  display: block;
+  transition: 0.5s;
+}
+
+.header-dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.header-dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.header-dropdown-content a:hover {
+  color: black;
+  background-color: #f1f1f1;
+  transition-duration: 0.5s;
+}
+
+
+.dropdown-header:hover .header-dropdown-content {
+  display: block;
+  background-color: black;
+  transition-duration: 0.5s;
+}
+
+
+.profil-header {
+  width: 100%;/*90%*/
+  height: calc(100vh - 65px);
+  position: relative;
+  /*height: 225px;*/
+  margin: auto;
+  margin-top: 10px;
+  border: none;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+}
+
+.profil-img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  margin: auto;
+  /*margin-top: 25px;*/
+  background-image: url("proPic.jpg");
+  image-orientation: from-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.profil-img-upload {
+    display: none;
+}
+
+.imageSubmit {
+  display: none;
+}
+
+.camera-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  position: absolute;
+  text-align: center;
+  left: 215px;
+  top: 90px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #D3D3D3;
+  z-index: 1;
+}
+
+.profil-img div i {
+  font-size: 16px;
+  position: relative;
+  display: block;
+  margin: auto;
+  /*z-index: 1;*/
+}
+
+.follow-box {
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin: auto;
+    margin-top: 25px;/*
+  justify-content: center;
+  align-items: center;*/
+}
+
+.followers, .following, .posts {
+  margin: 15px auto;
+  text-align: center;
+}
+
+.followers p, .following p, .posts p {
+  color: #707070;
+}
+
+.edit-profil {
+  width: 70%;
+  height: 30px;
+  color: white;
+  font-size: 15px;
+  display: block;
+  outline: none;
+  margin: auto;
+  margin-top: 25px;
+  background-color: black;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.edit-profil:hover {
+  color: black;
+  background-color: white;
+  transition-duration: 0.3s;
+}
+
+.block-separator {
+  width: 90%;
+  height: 1px;
+  margin: 25px auto;
+  background-color: #111;
+}
+
+.bio {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 900px) {
+  .menu-bar {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    position: relative;
+  }
+
+  .side-bar {
+    width: 30%;
+    height: calc(100vh - 45px);
+    position: absolute;
+  }
+
+  .bar {
+    position: sticky;
+    width: 70%;
+    height: 100%;
+    left: 0;
+    background-color: black;
+  }
+
+  main section {
+    width: 70%;
+    margin: auto;
+  }
+
+  .profil-header {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 25px; 
+  }
+  
+  .camera-icon {
+    left: 315px;
+    top: 120px;
+  }
+  
+  .follow-box {
+    margin-top: 15px;
+  }
+  
+  .followers, .following, .posts {
+    margin: 10px auto;
+    font-size: 15px;
+  }
+  
+  .followers p, .following p, .posts p {
+    color: grey;
+    font-size: 16px;
+  }
+  
+  .edit-profil {
+    width: 50%;
+    background-color: #111;
+    border: 1px solid #111;
+  }
+  
+  .edit-profil:hover {
+    color: white;
+    background-color: black;
+  }
+  
+  .bio {
+    font-size: 16px;
+  }
+
+  #username {
+    font-size: 25px;
+    text-align: center;
+  }
+  
+}
+
+.social-media-link ul li {
+  border: 1px solid black;
+
+}
+
+.media-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.media-icon {
+  width: auto;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 25px;
+  font-size: 21px;
+}
+
+.fa-snapchat-square, .fa-instagram, .fa-facebook-official {
+  color: BLACK;
+}
+
+.media-username {
+  width: auto;
+  height: auto;
+  color: #707070;
+}
+
+.view-post {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.post-view-btn {
+  display: block;
+  margin: auto;
+}
+
+.profil-infos {
+    width: 70%;
+    height: 30px;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    top: 50px;
+    color: black;
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/*Do the neon button*/
+.profil-infos:hover {
+  color: black;
+  background-color: white;
+  transition: 0.5s;
+  outline: none;
+}
+
+#username {
+  font-size: 18px;
+  text-align: center;
+}
+
+/*
+.view-post-box {
+  width: 50%;
+  margin: auto;
+}*/
+/*FOOTER*/
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 900px) {
+
+}

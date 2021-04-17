@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 54px;
+    /*transition: all ease-in-out 0.3s;*/
+}
+
+#header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#header div {
+    width: 50%;
+    background-color: lawngreen;
+}
+
+#main {
+    text-align: center;
+    overflow: hidden;
+    background-color: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+#left {
+    width: 0;
+    background-color: red;
+    transition-duration: 0.7s;
+}
+
+#middle {
+    width: 100%;
+    background-color: yellow;   
+    transition: all ease-in-out 0.2s;
+}
+
+#right {
+    width: 0;
+    text-align: right;
+    background-color: green;
+}

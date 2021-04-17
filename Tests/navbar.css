@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #FBF8F6;
+  overflow: auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 6px;
+  margin: 6px;
+  color: black;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navLink {
+  float: right;
+}
+
+.navLink a {
+  line-height: 28px;
+  font-size: 20px;
+  margin-right: 25px;
+}
+
+.navLink a:hover {
+  border-bottom: 2px solid black;
+}
+
+#logInNavBtn {
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+#logInNavBtn:hover {
+  transition-duration: .5s;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #4CAF50;
+}

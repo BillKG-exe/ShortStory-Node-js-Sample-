@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShortStory | <%= title %></title>
+    <link rel="shortcut icon" type="image/x-icon" href="book.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link href="/login.css" rel="stylesheet" type="text/css" />
+    <script src="#"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- for logo <a></a> -->
+      <a href="/home" class="header-brand">ShortStory</a>
+    </header>
+    <main>
+
+      <section>
+        <div class="login-image">
+
+        </div>
+        <form class="" action="auth/login" method="POST">
+          <h1>Log in</h1>
+          <input type="email" placeholder="email" name="email" >
+          <br><br><br>
+          <input type="password" placeholder="password" name="password" >
+          <br>
+          <a class="forgot-btn" href="#">Forgot Password?</a>
+          <br><br>
+          <button type="submit" name="submit">Log In</button>
+          <% if (message.length > 0 && message) {%>
+            <div id='error-message'>
+              <p><%= message %></p>            
+            </div> 
+          <% } %>
+          <br>
+          <a class="new-account" href="/signUp">Create new account</a>
+          </form>
+        </section>
+    </main>
+  </body>
+</html>

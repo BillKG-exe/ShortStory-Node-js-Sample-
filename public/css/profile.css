@@ -1,0 +1,280 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;      
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  rgb(252, 247, 247);
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+#header-brand {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#header-brand a {
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+/*///////////////////////CUSTOM NAVBAR////////////////////////*/
+nav {
+        display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+  
+  nav a {
+    display: none;
+    text-align: center;
+    color: #707070;
+    font-size: 16px;
+    margin: auto;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  nav .active {
+      color: black;
+  }
+  
+  #bar {
+    display: block;
+    margin: auto;
+  }
+
+  #bar i{
+    margin: auto;
+  }
+  
+  #times {
+    display: none;
+  }
+
+
+.profile {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.2);
+}
+/*
+.profile-pic {
+    padding-top: 10px;
+}*/
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px auto 20px auto;
+    display: block;
+}
+
+.profile-img-upload {
+    display: none;
+}
+
+.imageSubmit {
+  display: none;
+}
+
+.camIcon {
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    left: 56%;
+    bottom: 53%;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #D3D3D3;
+}
+
+.camIcon i  {
+    font-size: 16px;
+    margin: auto;
+}
+
+.profile .username {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.follow-info {
+    width: 90%;
+    text-align: center;
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.val {
+    font-weight: bold;
+    color: black;
+}
+
+.fol {
+    color: #707070;
+}
+
+.box {
+    flex-grow: 1;
+}
+
+.editProfil {
+    text-align: center;
+    padding: 10px;
+}
+
+.editProfil a {
+    color: black;
+    font-style: oblique;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+
+.editProfil a:hover {
+    color: white;
+    background-color: black;
+    transition-duration: 0.5s;
+}
+
+.bio p {
+    color: black;
+}
+
+.bio {
+    color: #7f808c;
+    font-size: 15px;
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin: 25px auto 25px auto;
+    border-radius: 5px;
+    background-color: white;
+    overflow-x: hidden;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.2);
+}
+
+.posts-section {
+    display: flex;
+    flex-grow: 1;
+    color: black;
+    font-size: 15px;
+    font-style: italic;
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin: 25px auto 25px auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.2);
+}
+
+.postsBox {
+    width: 50%;
+    height: auto;
+}
+
+.postsCount {
+    color: #7f808c;
+    text-align: right;
+    width: 50%;
+    height: auto;
+}
+
+.social-media {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    /*TOP RIGHT BOTTOM LEFT*/
+    padding: 30px 20px 25px 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.2);  
+}
+
+.media {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #edeef6;
+}
+
+.name {
+    text-align: center;
+}
+
+.name span{
+    text-align: left;
+}
+
+.media p {
+    color: #7f808c;
+    font-size: 15px;
+    flex-grow: 1;
+    float: left;
+}
+
+.media i {
+    color: black;
+}
+
+.fa {
+    font-size: 20px;
+}
+
+.twitter {
+    border-bottom: none;
+}
+
+.options {
+    width: 100%;
+    height: auto;
+    margin: 20px auto 20px auto;
+    display: flex;
+}
+
+.options a {
+    width: 125px;
+    color: black;
+    display: flex;
+    padding: 15px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 0.2);  
+}
+
+.options a div {
+    flex-grow: 1;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShortStory | <%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="/profile.css" rel="stylesheet" type="text/css" />
+    <script src="/profile.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+        <div id="header-brand"><a  href="/home">ShortStory</a></div>
+        <%- include('./partials/customNav.ejs') %>
+    </header>
+    <main>
+      <div class="profile">
+        <form class="profile-pic" method="POST" action="/uploads/profil"  enctype="multipart/form-data">
+          <img src="<%= user.getProfilPicPath() %>" alt="Profile Image">
+            <input type="file" class="profile-img-upload" name="picture">
+            <input type="submit" class="imageSubmit">
+          <div class="camIcon">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $(".camIcon").click(function () {
+                $(".profile-img-upload").click();
+                $(".profile-img-upload").change(function (){
+                  $(".imageSubmit").click();
+                });
+              });
+            });
+          </script>
+        </form>
+        <div class="username"><%= user.getUsername() %></div>
+        <div class="follow-info">
+          <div class="box">
+            <div class="val">10K</div>
+            <div class="fol follower">Follower</div>
+          </div>
+          <div class="box">
+            <div class="val">10</div>
+            <div class="fol posts">Posts</div>
+          </div>
+          <div class="box">
+            <div class="val">4507</div>
+            <div class="fol following">Following</div>
+          </div>
+        </div>
+        <div class="editProfil"><a href="/editProfile">Edit Profile</a></div>
+      </div>
+      <div class="bio">
+        <p>Bio</p>
+        <% if  (user.getBio()) { %>
+          <%= user.getBio() %>
+        <% } else { %>
+           <p>blank</p> 
+        <% } %>
+<!--         Do depend better praise do friend garden an wonder to. Intention age nay otherwise but breakfast. Around garden beyond to extent by. 
+ -->      </div> 
+      <div class="posts-section">
+        <div class="postsBox">Posts</div>
+        <div class="postsCount">50</div>
+      </div>
+      <div class="social-media">
+        <div class="media">
+          <p class="name">Billy Tahirou Ouattara</p>
+        </div>
+        <div class="media">
+          <% if (user.getIg()) { %>
+            <p><%= user.getIg() %></p>
+          <% } else { %>
+            <p>Instagram</p>
+          <% } %>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </div>
+        <div class="media">
+          <% if (user.getFb()) { %>
+            <p><%= user.getFb() %></p>
+          <% } else { %>
+            <p>Facebook</p>
+          <% } %>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+        <div class="media">
+          <% if (user.getSp()) { %>
+            <p><%= user.getSp() %></p>
+          <% } else { %>
+            <p>SnapChat</p>
+          <% } %>
+            <i class="fa fa-snapchat-ghost" aria-hidden="true"></i>
+        </div>
+        <div class="media twitter">
+          <% if (user.getTw()) { %>
+            <p><%= user.getTw() %></p>
+          <% } else { %>
+            <p>Twitter</p>
+          <% } %>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+      </div>
+      <div class="options">
+        <a href="/logout">
+          <div>Log Out</div>
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+      </div>
+      <br><br><br>
+    </main>
+  </body>
+</html>
